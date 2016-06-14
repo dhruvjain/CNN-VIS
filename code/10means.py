@@ -1,6 +1,8 @@
 # set up Python environment: numpy for numerical routines, and matplotlib for plotting
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.cluster.vq import kmeans,vq
+from numpy import random
 # display plots in this notebook
 
 # set display defaults
@@ -81,10 +83,48 @@ for layer_name, blob in net.blobs.iteritems():
 for layer_name, param in net.params.iteritems():
     print layer_name + '\t' + str(param[0].data.shape), str(param[1].data.shape)
 
-def vis_square(data):
+def vis_square(data, slice):
     data = (data - data.min()) / (data.max() - data.min())
-    plt.imshow(data); plt.axis('off'); plt.show()
+    newimg=[]
+    newimg1=[]
+    mindiff=[10 for x in range(96)]
+    minindx=[100 for x in range(96)]
+    diff=[[10 for x in range(96)] for y in range(96)]
+    
+    for i in range (0,96):	
+    	newimg.append(data[i][:][slice])
+    
+    #plt.imshow(newimg); plt.axis('off'); plt.show()
+    
+    # for i in range (0,95):
+    # 	for j in range(i+1,96):
+    # 		diff[i][j] = sum((newimg[i]-newimg[j])**2)
+     	
+    # for i in range (0,95):
+    # 	mindiff[i] = min(diff[i])
+    # 	minindx[i] = np.argmin(diff[i])
+    
+    # for i in range (0,95):
+    # 	temp = newimg[np.argmin(mindiff) + 1]
+    # 	newimg[np.argmin(mindiff) + 1] = newimg[minindx[np.argmin(mindiff)]]
+    # 	newimg[minindx[np.argmin(mindiff)]] = temp
+    # 	temp = mindiff[np.argmin(mindiff) + 1]
+    # 	mindiff[np.argmin(mindiff) + 1] = mindiff[minindx[np.argmin(mindiff)]]
+    # 	mindiff[minindx[np.argmin(mindiff)]] = temp
+    # 	mindiff[np.argmin(mindiff)] = 10
 
-feat = net.blobs['conv1'].data[0][87]
-vis_square(feat)
+    random.seed(123)
+    centroids,_ = kmeans(newimg, 10, 1000)
+    idx,_ = vq(newimg,centroids)
+
+
+    for i in range (0,96):
+        print np.argmin(idx)
+    	newimg1.append(newimg[np.argmin(idx)])
+    	idx[np.argmin(idx)] = 10
+
+    plt.imshow(newimg1); plt.axis('off'); plt.show()
+
+feat = net.blobs['conv1'].data[0]
+vis_square(feat,15)
 
