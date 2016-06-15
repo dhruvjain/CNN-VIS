@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.cluster.vq import kmeans,vq
 from numpy import random
+import sys
+from matplotlib.mlab import PCA as p
 # display plots in this notebook
 
 # set display defaults
@@ -83,48 +85,75 @@ for layer_name, blob in net.blobs.iteritems():
 for layer_name, param in net.params.iteritems():
     print layer_name + '\t' + str(param[0].data.shape), str(param[1].data.shape)
 
-def vis_square(data, slice):
+def rearrange(a):
+      pca = p(a)
+      Y = pca.Y[:,0]
+      X = a
+      sorted_a= [x for (y,x) in sorted(zip(Y,X))]
+      return sorted_a
+
+def  kmeansclustering(data, slice,k):
     data = (data - data.min()) / (data.max() - data.min())
     newimg=[]
-    newimg1=[]
-    mindiff=[10 for x in range(96)]
-    minindx=[100 for x in range(96)]
-    diff=[[10 for x in range(96)] for y in range(96)]
+    newimg1 = []
     
     for i in range (0,96):	
     	newimg.append(data[i][:][slice])
     
-    #plt.imshow(newimg); plt.axis('off'); plt.show()
-    
-    # for i in range (0,95):
-    # 	for j in range(i+1,96):
-    # 		diff[i][j] = sum((newimg[i]-newimg[j])**2)
-     	
-    # for i in range (0,95):
-    # 	mindiff[i] = min(diff[i])
-    # 	minindx[i] = np.argmin(diff[i])
-    
-    # for i in range (0,95):
-    # 	temp = newimg[np.argmin(mindiff) + 1]
-    # 	newimg[np.argmin(mindiff) + 1] = newimg[minindx[np.argmin(mindiff)]]
-    # 	newimg[minindx[np.argmin(mindiff)]] = temp
-    # 	temp = mindiff[np.argmin(mindiff) + 1]
-    # 	mindiff[np.argmin(mindiff) + 1] = mindiff[minindx[np.argmin(mindiff)]]
-    # 	mindiff[minindx[np.argmin(mindiff)]] = temp
-    # 	mindiff[np.argmin(mindiff)] = 10
-
+    newimg=np.asarray(newimg)
+    print type(newimg)
+    display = rearrange(newimg)
+    plt.imshow(display); plt.axis('off'); plt.show()
     random.seed(123)
-    centroids,_ = kmeans(newimg, 10, 1000)
+    centroids,_ = kmeans(newimg, k, 1000)
     idx,_ = vq(newimg,centroids)
 
-
+    count =0
+    prev_num = min(idx)
     for i in range (0,96):
-        print np.argmin(idx)
-    	newimg1.append(newimg[np.argmin(idx)])
-    	idx[np.argmin(idx)] = 10
 
+        cur_num = min(idx)
+        if(cur_num!=prev_num):
+            prev_num=cur_num
+            print count
+            count = 0
+            newimg1.append([1]*55)
+        else:
+            count = count +1
+            newimg1.append(newimg[np.argmin(idx)])
+
+    	idx[np.argmin(idx)] = k
+    
     plt.imshow(newimg1); plt.axis('off'); plt.show()
 
-feat = net.blobs['conv1'].data[0]
-vis_square(feat,15)
+def  principal_comp_anlysis(data, slice):
+    data = (data - data.min()) / (data.max() - data.min())
+    newimg=[]
+    indices=[]
+    for i in range (0,96):  
+        newimg.append(data[i][:][slice])
+    
+    newimg1=np.asarray(newimg)
+
+    display = rearrange(newimg1)
+
+    newimg1=[]
+
+    for elet in newimg:
+        elet=elet.tolist()
+        newimg1.append(elet)
+
+    for elet in display:
+        elet=elet.tolist()
+        index = [i for i, x in enumerate(newimg1) if x == elet]
+        indices.append(index[0])        
+    
+    plt.imshow(display); plt.axis('off'); plt.show()
+    print indices
+if __name__ == '__main__':
+
+    feat = net.blobs['conv1'].data[0]
+    # print sys.argv[0],sys.argv[1]
+    # k = int(sys.argv[1])
+    principal_comp_anlysis(feat,15)
 
