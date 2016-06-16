@@ -36,21 +36,12 @@ def vis_square(data,fname,shape_info):
     output_file2.close()
 
 
-  
-    # for i in range(1,30):
-    #     misc.imsave('face'+str(i)+'.png', data[i])
-    #     plt.imshow(data[i]); plt.axis('off')
-        # plt.show()
-
 
 if __name__ == '__main__':
 
 	plt.rcParams['figure.figsize'] = (10, 10)        # large images
 	plt.rcParams['image.interpolation'] = 'nearest'  # don't interpolate: show square pixels
 	plt.rcParams['image.cmap'] = 'gray'  # use grayscale output rather than a (potentially misleading) color heatmap
-
-
-
 
 
 	caffe_root='../'

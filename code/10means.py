@@ -150,8 +150,13 @@ def  principal_comp_anlysis(data, slice):
     
     plt.imshow(display); plt.axis('off'); plt.show()
     print indices
+    
+
+
+
 if __name__ == '__main__':
 
+    np.save('data.npy')
     feat = net.blobs['conv1'].data[0]
     # print sys.argv[0],sys.argv[1]
     # k = int(sys.argv[1])
