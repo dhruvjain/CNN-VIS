@@ -19,7 +19,6 @@ def getorder(Principal_image,imlist):
   print sorted_list
   return sorted_a
 
-
 def pca(X):
   # Principal Component Analysis
   # input: X, matrix with training data as flattened arrays in rows
@@ -49,38 +48,33 @@ def pca(X):
   #return the projection matrix, the variance and the mean
   return V,S,mean_X
 
+if __name__ == '__main__':
+	
+	imlist = np.load('data.npy')
+	imlistcopy=imlist
+	im = imlist[0]
 
-imlist = np.load('data.npy')
-imlistcopy=imlist
-im = imlist[0]
+	# im = imlist[0] #open one image to get the size
+	m,n = im.shape[0:2] #get the size of the images
+	imnbr = len(imlist) #get the number of images
 
-# im = imlist[0] #open one image to get the size
-m,n = im.shape[0:2] #get the size of the images
-imnbr = len(imlist) #get the number of images
+	# #create matrix to store all flattened images
+	# imlist = imlist.tolist()
+	immatrix = imlist.reshape(96,55*55)
 
-# #create matrix to store all flattened images
-# imlist = imlist.tolist()
-immatrix = imlist.reshape(96,55*55)
+	# #perform PCA
+	V,S,immean = pca(immatrix)
 
-# #perform PCA
-V,S,immean = pca(immatrix)
+	imlist = np.load('data.npy')
 
-imlist = np.load('data.npy')
-print imlist[0]
+	mode = V[0].reshape(m,n) # the principal image
+	print mode
 
-#mean image and first mode of variation
-# immean = immean.reshape(m,n)
-# print '*********'
+	data=getorder(mode,imlist) # get the order according to mode
+	data = np.rint(data)
 
-# print '/*********'
-mode = V[0].reshape(m,n)
-print mode
+	output_file = open('vis_pca.vox', 'wb')
 
-data=getorder(mode,imlist)
-data = np.rint(data)
-
-output_file = open('vis_pca.vox', 'wb')
-
-arr = np.int8(data)
-output_file.write(arr)
-output_file.close()
+	arr = np.int8(data)
+	output_file.write(arr)
+	output_file.close()
