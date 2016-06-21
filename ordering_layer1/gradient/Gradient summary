@@ -1,0 +1,20 @@
+
+Method 1 - Using Caffe inbuilt functions
+------------------------------------------------------------------------------------------------------------------------
+
+->Caffe calculates gradients using backpropagation.The network used was CaffeNet,a modified version of AlexNet where the order of the pooling and normalization layer was reversed.
+->Caffe stores the gradient of the last layer with respect to the filter weights in blobs.layers attribute.
+->By adding an innerproduct layer that multiplies the final fully-connected layer with a fixed vector the neuron to be analyzed is extracted and the gradients are obtained using the blobs.layer attribute.
+->Using different such vectors in the inner-product layer, the gradients of each final layer neuron with respect to the weights is obtained.
+
+
+Method 2 - Using numerical calculation
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+->Once the network was loaded the weights of a particular layer filter were changed and the change in activation of the neuron under consideration observed.
+->The gradient magnitude was approximated as (change in neuron activation)/(change in filter weights).
+
+
+ 
+

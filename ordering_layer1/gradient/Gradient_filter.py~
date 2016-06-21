@@ -20,7 +20,7 @@ transformer.set_channel_swap('data', (2,1,0))
 
 net.blobs['data'].reshape(1,3,227,227)
 net.blobs['data'].data[...] = transformer.preprocess('data', caffe.io.load_image('examples/images/cat.jpg'))
-net.blobs['label'].data[...]=281                         #Setting input image and label
+net.blobs['label'].data[...]=281
 out = net.forward()                                                                       
 net.blobs['fc9'].diff[0,0]=0.1                                                             
 #print("Predicted class is #{}.".format(out['prob'].argmax()))
