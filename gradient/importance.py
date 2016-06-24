@@ -64,7 +64,7 @@ for filename in glob.glob('data/cats/*.jpg'): #assuming gif
       grad = get_gradients(filename,0)
       output_grad += grad
       
-output_grad = output_grad/273        #importance of each of the 96 filters with respect to neuron_num
+output_grad = output_grad/200       #importance of each of the 96 filters with respect to neuron_num
 
 output_grad = (output_grad - output_grad.min())/(output_grad.max()-output_grad.min())
 
