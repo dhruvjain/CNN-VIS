@@ -22,7 +22,7 @@ plt.rcParams['image.cmap'] = 'gray'  # use grayscale output rather than a (poten
 
 
 
-def get_gradients(imagepath,neuron_num):
+def get_gradients(imagepath,neuron_num,layer_num):
 	##Loading the model where 2nd caffemodel has weights after innerproduct layer is incorporated
 	caffe.set_mode_cpu()
 	net = caffe.Net('models/bvlc_reference_caffenet/deploy.prototxt',
@@ -45,7 +45,7 @@ def get_gradients(imagepath,neuron_num):
 	back = net.backward()
 	j = back['data'].copy()
 
-	df_dwi= net.layers[1].blobs[0].diff                           #Gradients obtained                    
+	df_dwi= net.layers[layer_num].blobs[0].diff                           #Gradients obtained                    
 	
 
 	num=[]
@@ -55,13 +55,13 @@ def get_gradients(imagepath,neuron_num):
         return num
 
 
-grad = get_gradients('examples/images/cat.jpg',0)
+grad = get_gradients('examples/images/cat.jpg',281,1)
 
 ##################someway to get all cat images ,there are around 1600 in the dataset
 
 output_grad = np.zeros([1,96])
 for filename in glob.glob('data/cats/*.jpg'): #assuming gif
-      grad = get_gradients(filename,0)
+      grad = get_gradients(filename,281,1)
       output_grad += grad
       
 output_grad = output_grad/200       #importance of each of the 96 filters with respect to neuron_num
@@ -69,8 +69,8 @@ output_grad = output_grad/200       #importance of each of the 96 filters with r
 output_grad = (output_grad - output_grad.min())/(output_grad.max()-output_grad.min())
 
 o = np.array(output_grad)
-im = o.reshape(16,6)
-plt.imshow(im); plt.axis('off'); plt.show()
+#im = o.reshape(16,6)
+#plt.imshow(im); plt.axis('off'); plt.show()
 
         
 print output_grad
