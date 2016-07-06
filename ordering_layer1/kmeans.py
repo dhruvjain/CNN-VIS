@@ -137,5 +137,5 @@ if __name__ == '__main__':
     print sys.argv[0],sys.argv[1] 
     k = int(sys.argv[1])
     kmeansclustering(data,15,k)
-    principal_comp_anlysis(feat,15)
+    # principal_comp_anlysis(feat,15)
 
