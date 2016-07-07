@@ -1,6 +1,11 @@
-<p align="center">
-<a name="top" href="http://b4b4r07.com/dotfiles"><img src="https://raw.githubusercontent.com/b4b4r07/screenshots/master/dotfiles/logo.png"></a>
-</p>
+
+
+<a href="https://aimeos.org/">
+    <img src="https://aimeos.org/fileadmin/template/icons/logo.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
+</a>
+
+Visualization of Convolutional Neural Networks
+==============================================
 
 <p align="center">
 <b><a href="#overview">Overview</a></b>
