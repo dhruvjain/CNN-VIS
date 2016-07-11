@@ -297,25 +297,4 @@ Acknowledgment; I established this dotfiles referring to the following user's re
 
 <p align="right"><a href="#top">:arrow_up:</a></p>
 
-## Licence [![](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license]
-
-[![b4b4r07](http://www.gravatar.com/avatar/8238c3c0be55b887aa9d6d59bfefa504.png)](https://twitter.com/intent/follow?screen_name=b4b4r07 "Follow @b4b4r07 on Twitter")
-
-Copyright (c) 2014 "BABAROT" b4b4r07
-
-Licensed under the [MIT license](./doc/LICENSE-MIT.txt).
-
-Unless attributed otherwise, everything is under the MIT licence. Some stuff is not from me, and without attribution, and I no longer remember where I got it from. I apologize for that.
-
-[![](https://d2weczhvl823v0.cloudfront.net/b4b4r07/dotfiles/trend.png)][bitdeli]
-
-[travis]: https://travis-ci.org/b4b4r07/dotfiles
-[license]: ./doc/LICENSE-MIT.txt
-[platform]: ./doc/OS_X.md
-[vote]: https://voting-badge.herokuapp.com/vote?url=https://github.com/b4b4r07/dotfiles
-[doc]: ./etc/README.md
-[bitdeli]: https://bitdeli.com/free
-[dotfiles]: http://b4b4r07.com/dotfiles
-
-<p align="right"><a href="#top">:arrow_up:</a></p>
 
