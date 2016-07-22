@@ -2,33 +2,26 @@
 Visualization of Convolutional Neural Networks
 ==============================================
 
+
 <p align="center">
+->![showcase1](https://github.com/kgdrathan/app_ir_project/blob/master/images/s1.png)<-
 <b><a href="#overview">Overview</a></b>
 |
 <b><a href="#features">Features</a></b>
 |
-<b><a href="#installation">Installation</a></b>
+<b><a href="#installation and setup">Installation</a></b>
 |
 <b><a href="#updating">Updating</a></b>
 |
 <b><a href="#setup">Setup</a></b>
 |
 <b><a href="#structure">Structure</a></b>
-|
-<b><a href="#credits">Credits</a></b>
-|
-<b><a href="#license">License</a></b>
+
 </p>
 
 <br>
 
-[![](https://img.shields.io/travis/b4b4r07/dotfiles.svg?style=flat-square)][travis]
-[![](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license]
-[![](https://img.shields.io/badge/platform-OS%20X%20%7C%20Linux-808080.svg?style=flat-square)][platform]
-[![](https://voting-badge.herokuapp.com/img?url=https://github.com/b4b4r07/dotfiles)][vote]
-[![](https://img.shields.io/badge/documentation-etc-red.svg?style=flat-square)][doc]
-
-This is a repository with my [configuration files](http://en.wikipedia.org/wiki/Configuration_file), those that in Linux/OS X normally are these files under the `$HOME` directory that are hidden and preceded by a dot, AKA **dotfiles**.
+This project is a part of internship project that we did at Computer Vision Lab Dresden
 
 ## Overview
 
@@ -49,7 +42,7 @@ My primary OS is OS X (10.10.x) and some of these configurations are tuned to wo
 
 ***DEMO:***
 
-[![](https://raw.githubusercontent.com/b4b4r07/screenshots/master/dotfiles/demo_retina.png)][dotfiles]
+[!](https://raw.githubusercontent.com/b4b4r07/screenshots/master/dotfiles/demo_retina.png)][dotfiles]
 
 **Note:** You can clone or fork them freely, but I don't guarantee that they fit you.
 

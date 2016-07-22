@@ -2,33 +2,26 @@
 Visualization of Convolutional Neural Networks
 ==============================================
 
+
 <p align="center">
+
 <b><a href="#overview">Overview</a></b>
 |
 <b><a href="#features">Features</a></b>
 |
-<b><a href="#installation">Installation</a></b>
+<b><a href="#installation and setup">Installation</a></b>
 |
 <b><a href="#updating">Updating</a></b>
 |
 <b><a href="#setup">Setup</a></b>
 |
 <b><a href="#structure">Structure</a></b>
-|
-<b><a href="#credits">Credits</a></b>
-|
-<b><a href="#license">License</a></b>
+
 </p>
 
 <br>
 
-[![](https://img.shields.io/travis/b4b4r07/dotfiles.svg?style=flat-square)][travis]
-[![](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license]
-[![](https://img.shields.io/badge/platform-OS%20X%20%7C%20Linux-808080.svg?style=flat-square)][platform]
-[![](https://voting-badge.herokuapp.com/img?url=https://github.com/b4b4r07/dotfiles)][vote]
-[![](https://img.shields.io/badge/documentation-etc-red.svg?style=flat-square)][doc]
-
-This is a repository with my [configuration files](http://en.wikipedia.org/wiki/Configuration_file), those that in Linux/OS X normally are these files under the `$HOME` directory that are hidden and preceded by a dot, AKA **dotfiles**.
+This project is a part of internship project that we did at Computer Vision Lab Dresden
 
 ## Overview
 
@@ -49,7 +42,7 @@ My primary OS is OS X (10.10.x) and some of these configurations are tuned to wo
 
 ***DEMO:***
 
-[![](https://raw.githubusercontent.com/b4b4r07/screenshots/master/dotfiles/demo_retina.png)][dotfiles]
+[!](https://raw.githubusercontent.com/b4b4r07/screenshots/master/dotfiles/demo_retina.png)][dotfiles]
 
 **Note:** You can clone or fork them freely, but I don't guarantee that they fit you.
 
@@ -297,25 +290,4 @@ Acknowledgment; I established this dotfiles referring to the following user's re
 
 <p align="right"><a href="#top">:arrow_up:</a></p>
 
-## Licence [![](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license]
-
-[![b4b4r07](http://www.gravatar.com/avatar/8238c3c0be55b887aa9d6d59bfefa504.png)](https://twitter.com/intent/follow?screen_name=b4b4r07 "Follow @b4b4r07 on Twitter")
-
-Copyright (c) 2014 "BABAROT" b4b4r07
-
-Licensed under the [MIT license](./doc/LICENSE-MIT.txt).
-
-Unless attributed otherwise, everything is under the MIT licence. Some stuff is not from me, and without attribution, and I no longer remember where I got it from. I apologize for that.
-
-[![](https://d2weczhvl823v0.cloudfront.net/b4b4r07/dotfiles/trend.png)][bitdeli]
-
-[travis]: https://travis-ci.org/b4b4r07/dotfiles
-[license]: ./doc/LICENSE-MIT.txt
-[platform]: ./doc/OS_X.md
-[vote]: https://voting-badge.herokuapp.com/vote?url=https://github.com/b4b4r07/dotfiles
-[doc]: ./etc/README.md
-[bitdeli]: https://bitdeli.com/free
-[dotfiles]: http://b4b4r07.com/dotfiles
-
-<p align="right"><a href="#top">:arrow_up:</a></p>
 
