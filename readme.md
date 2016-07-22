@@ -12,9 +12,9 @@ Visualization of Convolutional Neural Networks
 |
 <b><a href="#requirements">Requirements</a></b>
 |
-<b><a href="#workflow">Workflow</a></b>
+<b><a href="#Work Flow">Workflow</a></b>
 |
-<b><a href="#slides and report">Slides and Report</a></b>
+<b><a href="#Slides and Report">Slides and Report</a></b>
 
 </p>
 
