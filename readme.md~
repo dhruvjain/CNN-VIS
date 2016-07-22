@@ -2,9 +2,11 @@
 Visualization of Convolutional Neural Networks
 ==============================================
 
+https://docs.google.com/presentation/d/1ouAYRkvWxoE3Y5vQkI47lZ6qMsE-QltN2yz1yNwd3dE/edit?usp=sharing
 
 <p align="center">
-
+<img src="https://github.com/dhruvjain/CNN-VIS/blob/master/images/new-logo-Vertical.png?raw=true" height="70" width="90" />
+<br>
 <b><a href="#overview">Overview</a></b>
 |
 <b><a href="#features">Features</a></b>
@@ -21,13 +23,14 @@ Visualization of Convolutional Neural Networks
 
 <br>
 
-This project is a part of internship project that we did at Computer Vision Lab Dresden
+This is the Project which we did during our internship at [Computer Vision Lab Dresden] (http://cvlab-dresden.de/) under the guidance of People at CVLD and CGV.
 
 ## Overview
 
-The primary goal is to increase CLI productivity on OS X, though many scripts run just fine on any POSIX implementation and it is easy to build environment again by running just the [installation command](#oneliner) of one-liner.
-
-My primary OS is OS X (10.10.x) and some of these configurations are tuned to work on that platform. The bash files are more generic and friendly toward other Unix-based operating systems.
+The primary goal is to Visualize interpret the neural nets for a deeper understanding. A better understanding of these models could lead to a more handcrafted design of CNN’s, higher efficiency or better performance as achieved by Zeiler et al. We divided the Visualization tasks into two broad categories: 
+* Activation of Filters
+* Gradient Based Visualization
+Both 2D as well as 3D visualization was performed in each case.
 
 <p align="right"><a href="#top">:arrow_up:</a></p>
 
