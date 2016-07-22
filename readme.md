@@ -12,9 +12,9 @@ Visualization of Convolutional Neural Networks
 |
 <b><a href="#requirements">Requirements</a></b>
 |
-<b><a href="#structure">Workflow</a></b>
+<b><a href="#workflow">Workflow</a></b>
 |
-<b><a href="#slides">Slides and Report</a></b>
+<b><a href="#slides and report">Slides and Report</a></b>
 
 </p>
 
@@ -40,12 +40,15 @@ Both 2D as well as 3D visualization was performed in each case.
  * The first by performing k-means clustering by taking any one slice of all 96 filters of conv1 layer. 
  * The second was doing PCA on the  similar rows of image slice. The rows are then reordered on the basis of the values of projection on the principal component in increasing order. This can be obtained by running the code ```ordering_layer1/pca_image/kmeans_pca.py```. 
  * Ordering for whole output images instead of rows in a slice from the volume. Here the output images are stacked column wise to form a vector and Principal Component Analysis (PCA) is done on them. The vectors are then reshaped back to images and are reordered accordingly in the volume. This volume of reordered images are visualized using the cgv-viewer. The code to perform this task is ```ordering_layer1/pca_image/pca_image.py```. A sample screenshot of the reordered volume visualization of conv1 layer is shown below:
-![showcase1](https://github.com/dhruvjain/CNN-VIS/blob/master/images/pca1.png)
+<p align="center">
+<img src="https://github.com/dhruvjain/CNN-VIS/blob/master/images/pca1.png?raw=true" />
+</p>
+
 
 - **Visualization of Gradients** In this method we calculated the gradients of the output of final layer with respect to the filter weights and visualized them as 3D volume. The gradient calculation can
-be found at ```gradient/grad_calc.py``` Demo of variation of gradient among images belonging to a reference class , the classifying neuron of this class being the neuron or classification under inspection, a similar class and a dissimilar class can be found here:
+be found at ```gradient/grad_calc.py```  Demo of variation of gradient among images belonging to a reference class, the classifying neuron of this class being the neuron or classification under inspection, a similar class and a dissimilar class can be found here:
 
-* **DEMO:***
+* **DEMO:** 
 
 <p align="right"><a href="#top">:arrow_up:</a></p>
 
