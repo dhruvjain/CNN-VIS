@@ -20,7 +20,9 @@ Visualization of Convolutional Neural Networks
 
 <br>
 
-This is the Project which we did during our internship at <a href="http://cvlab-dresden.de/" target="_blank" rel="noopener">Computer Vision Lab Dresden</a> under the guidance of People at CVLD and CGV.
+<p>
+This is the Project which we did during our internship at <a href="http://cvlab-dresden.de/" target="_blank">Computer Vision Lab Dresden</a> under the guidance of People at CVLD and CGV.
+</p>
 
 ## Overview
 
