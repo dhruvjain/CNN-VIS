@@ -51,10 +51,9 @@ Both 2D as well as 3D visualization was performed in each case.
 be found at ```gradient/grad_calc.py```  Demo of variation of gradient among images belonging to a reference class, the classifying neuron of this class being the neuron or classification under inspection, a similar class and a dissimilar class can be found here:
 
 * **DEMO:**  <p align="center">
-<img src="https://github.com/dhruvjain/CNN-VIS/blob/master/images/ani.gif" height="70" width="90" />
+<img src="https://github.com/dhruvjain/CNN-VIS/blob/master/images/ani.gif" height="170" width="190" />
 </p>
 
-![alt tag]( =70x80)
 
 <p align="right"><a href="#top">:arrow_up:</a></p>
 

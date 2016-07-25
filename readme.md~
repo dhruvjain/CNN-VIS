@@ -50,7 +50,10 @@ Both 2D as well as 3D visualization was performed in each case.
 - **Visualization of Gradients** In this method we calculated the gradients of the output of final layer with respect to the filter weights and visualized them as 3D volume. The gradient calculation can
 be found at ```gradient/grad_calc.py```  Demo of variation of gradient among images belonging to a reference class, the classifying neuron of this class being the neuron or classification under inspection, a similar class and a dissimilar class can be found here:
 
-* **DEMO:** ![alt tag](https://github.com/dhruvjain/CNN-VIS/blob/master/images/ani.gif =70x80)
+* **DEMO:**  <p align="center">
+<img src="https://github.com/dhruvjain/CNN-VIS/blob/master/images/ani.gif" height="70" width="90" />
+</p>
+
 
 <p align="right"><a href="#top">:arrow_up:</a></p>
 
