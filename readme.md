@@ -62,6 +62,7 @@ be found at ```gradient/grad_calc.py```  Demo of variation of gradient among ima
 * [Caffe](http://caffe.berkeleyvision.org/): We used ```pycaffe``` (caffe interface in python) to perform all the tasks involving CNNs.
 * For 3D visualization we used ```CGV 3D viewer``` which is proprietary of the institute
 
+<p align="right"><a href="#top">:arrow_up:</a></p>
 
 ## Work Flow
 
