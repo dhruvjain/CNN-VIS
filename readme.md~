@@ -75,6 +75,7 @@ We follwed the following workflow during the project:
 
 ## Slides and Report
 * [Slides] (https://docs.google.com/presentation/d/1ouAYRkvWxoE3Y5vQkI47lZ6qMsE-QltN2yz1yNwd3dE/edit?usp=sharing)
+* [Report] (https://docs.google.com/presentation/d/1ouAYRkvWxoE3Y5vQkI47lZ6qMsE-QltN2yz1yNwd3dE/edit?usp=sharing)
 
 
 <p align="right"><a href="#top">:arrow_up:</a></p>
