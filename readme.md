@@ -75,7 +75,7 @@ We follwed the following workflow during the project:
 
 ## Slides and Report
 * [Slides] (https://docs.google.com/presentation/d/1ouAYRkvWxoE3Y5vQkI47lZ6qMsE-QltN2yz1yNwd3dE/edit?usp=sharing)
-* [Report] (https://github.com/dhruvjain/CNN-VIS/blob/master/images/report.pdf)
+* [Report] (https://github.com/dhruvjain/CNN-VIS/blob/06c5edd3b416aeb390134e08d26115314dbc8e80/images/report.pdf)
 
 
 <p align="right"><a href="#top">:arrow_up:</a></p>
